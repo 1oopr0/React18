@@ -13,17 +13,10 @@ class LikeButton extends React.Component {
       return 'You liked comment number ' + this.props.commentID;
     }
 
-    // return e(
-    //   'button',
-    //   { onClick: () => this.setState({ liked: true }) },
-    //   'Like'
-    // );
-
-    // using JSX : need babel.js
-    return (
-      <button onClick={()=> this.setState({liked : true })}>
-        Like
-      </button>
+    return e(
+      'button',
+      { onClick: () => this.setState({ liked: true }) },
+      'Like'
     );
   }
 }
