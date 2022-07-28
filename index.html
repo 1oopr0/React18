@@ -28,11 +28,60 @@
 
     <!-- Load React. -->
     <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
-    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js" crossorigin></script>
 
     <!-- Load our React component. -->
-    <script src="like_button.js"></script>
+    <script type="text/babel">
+'use strict';
+
+const e = React.createElement;
+
+class LikeButton extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { liked: false };
+  }
+
+  render() {
+    if (this.state.liked) {
+      return 'You liked comment number ' + this.props.commentID;
+    }
+
+    // return e(
+    //   'button',
+    //   { onClick: () => this.setState({ liked: true }) },
+    //   'Like'
+    // );
+
+    // using JSX : need babel.js
+    return (
+      <button onClick={()=> this.setState({liked : true })}>
+        Like
+      </button>
+    );
+  }
+}
+
+// const domContainer = document.querySelector('#like_button_container');
+// ReactDOM.render(e(LikeButton), domContainer);
+
+// Find all DOM containers, and render Like buttons into them.
+document.querySelectorAll('.like_button_container')
+.forEach(domContainer => {
+  // Read the comment ID from a data-* attribute.
+  const commentID = parseInt(domContainer.dataset.commentid, 10);
+  const root = ReactDOM.createRoot(domContainer);
+  root.render(
+    e(LikeButton, { commentID: commentID})
+  );
+});
+
+    </script>
+
+
 
   </body>
 </html>
