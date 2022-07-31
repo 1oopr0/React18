@@ -1,0 +1,24 @@
+{
+  "name": "6668a1f6986742109c00a581ce704605-f6c882b6ae18bde42dcf6fdb751aae93495a2275",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000R\u0000e\u0000a\u0000c\u0000t\u00001\u00008\u0000\r\u0000 \u0000\r\u0000 \u0000#\u0000#\u0000#\u0000#\u0000#\u0000#\u0000 \u00002\u00000\u00002\u00002\u0000-\u00000\u00007\u0000-\u00002\u00007\u0000\r\u0000 \u0000>\u0000 \u0000i\u0000d\u0000�� \u0000q\u0000u\u0000e\u0000r\u0000y\u0000S\u0000e\u0000l\u0000e\u0000c\u0000t\u0000o\u0000r\u0000��\u001c� \u0000#\u0000D� \u0000����,\u0000 \u0000c\u0000l\u0000a\u0000s\u0000s\u0000�� \u0000q\u0000u\u0000e\u0000r\u0000y\u0000S\u0000e\u0000l\u0000e\u0000c\u0000t\u0000o\u0000r\u0000��\u001c� \u0000.\u0000D� \u0000����.\u0000 \u0000��� \u0000\u001c�|� \u0000\u0000�8�,� \u0000\u0018� \u0000���.\u0000",
+  "main": "like_button.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1oopr0/React18.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/1oopr0/React18/issues"
+  },
+  "homepage": "https://github.com/1oopr0/React18#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^3.1.2"
+  }
+}
