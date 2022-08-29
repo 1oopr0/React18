@@ -1,16 +1,22 @@
-var my_name = {
-    firstName: '1oo',
-    lastName: 'pro'
-};
-function formatName(my_name) {
-    return my_name.firstName + ' ' + my_name.lastName;
+
+function tick() {
+    var element = React.createElement(
+        'div',
+        null,
+        React.createElement(
+            'h1',
+            null,
+            'Hello, world!'
+        ),
+        React.createElement(
+            'h2',
+            null,
+            'It is ',
+            new Date().toLocaleTimeString(),
+            '.'
+        )
+    );
+    ReactDOM.render(element, document.getElementById('root'));
 }
 
-var element = React.createElement(
-    'h1',
-    null,
-    'Hello, ',
-    formatName(my_name)
-);
-
-ReactDOM.render(element, document.getElementById('root'));
+setInterval(tick, 1000);

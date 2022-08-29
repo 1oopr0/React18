@@ -1,19 +1,13 @@
-const my_name = {
-    firstName : '1oo',
-    lastName : 'pro'
-};
-function formatName(my_name){
-    return my_name.firstName + ' ' + my_name.lastName
+
+function tick(){
+    const element = (
+        <div>
+            <h1>Hello, world!</h1>
+            <h2>It is {new Date().toLocaleTimeString()}.</h2>
+        </div>
+    );
+    ReactDOM.render(element, document.getElementById('root'));
 }
 
-const element = (
-    <h1>
-      Hello, {formatName(my_name)}
-    </h1>
-);
-
-ReactDOM.render(
-    element,
-    document.getElementById('root')
-);
+setInterval(tick, 1000);
 
